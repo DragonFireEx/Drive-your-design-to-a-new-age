@@ -1,19 +1,22 @@
-*
-{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body
-{
+body {
     padding: 2vh 2vw;
     font-family: lato;
     color: #fff;
+    background-color: #efefef;
 }
 
-#main
+button
 {
+    cursor: pointer;
+}
+
+#main {
     width: 100%;
     height: fit-content;
     display: flex;
@@ -22,10 +25,10 @@ body
     align-items: center;
 }
 
-#left, #right
-{
+#left,
+#right {
     background-image: url(img/left.png);
-    background-size:contain;
+    background-size: contain;
     background-repeat: no-repeat;
     object-fit: cover;
     min-width: 300px;
@@ -38,8 +41,7 @@ body
     align-items: center;
 }
 
-#left #content
-{
+#left #content {
     width: 294px;
     height: 80%;
     display: flex;
@@ -47,15 +49,13 @@ body
     padding: 2vh;
 }
 
-#left #content p
-{
+#left #content p {
     font-size: 0.8rem;
     text-align: center;
     font-weight: 300;
 }
 
-#left #button-container
-{
+#left #button-container {
     width: 100%;
     height: 20%;
     display: flex;
@@ -63,8 +63,7 @@ body
     align-items: start;
 }
 
-#left #button-container button
-{
+#left #button-container button {
     width: 120px;
     height: 2.5rem;
     background-color: #fff;
@@ -75,13 +74,11 @@ body
 }
 
 
-#right
-{
+#right {
     background-image: url(img/right.png);
 }
 
-#right header
-{
+#right header {
     width: 100%;
     height: 40%;
     display: flex;
@@ -89,14 +86,13 @@ body
     padding: 5vh;
 }
 
-#right header h1
-{
+#right header h1 {
     font-weight: 500;
     font-size: 1.9rem;
     text-align: left;
 }
-#right #boxes
-{
+
+#right #boxes {
     width: 100%;
     height: 60%;
     display: flex;
@@ -107,8 +103,7 @@ body
     padding: 2.5vh;
 }
 
-#right #boxes .box
-{
+#right #boxes .box {
     height: 50%;
     width: 50%;
     display: flex;
@@ -118,55 +113,262 @@ body
     padding: 1rem;
 }
 
-#right #boxes .box #no
-{
+#right #boxes .box #no {
     color: rgba(255, 255, 255, 0.4);
 }
 
-#right #boxes .box #text
-{
+#right #boxes .box #text {
     color: #fff;
     font-weight: 300;
     font-size: 0.7rem;
 }
 
-@media screen and (min-width: 700px) and (max-height: 450px)
-{
-    #left, #right
-    {
+@media screen and (min-width: 700px) and (max-height: 450px) {
+
+    #left,
+    #right {
         min-width: 100px;
-        width: 31.7vw;
-        min-height: 210px;
-        height: 94vh;
+        width: 30.4vw;
+        height: 92vh;
+        min-height: 378px;
+        max-height: 380px;
     }
 
-    #main
-    {
+    #main {
         flex-direction: row;
-        max-width: 62.1vw;
-        height: 94vh;
+        max-width: 534px;
+        height: 92vh;
+        min-height: 378px;
+        max-height: 380px;
         margin: 0 auto;
     }
-    body
-    {
+
+    body {
         justify-content: center;
         align-items: center;
     }
 
-    #right #boxes .box #text
-{
-    color: #fff;
-    font-weight: 300;
-    font-size: 0.62rem;
-}
-    #left #content p
-    {
+    #right #boxes .box #text {
+        color: #fff;
+        font-weight: 300;
+        font-size: 0.62rem;
+    }
+
+    #left #content p {
         font-size: 0.7rem;
         text-align: center;
         font-weight: 300;
         padding-bottom: 4vh;
+        width: 80%;
+        margin: 0 auto;
     }
 
+}
 
+@media screen and (min-width: 740px) and (max-height: 360px)
+{
+
+    #left,
+    #right {
+        min-width: 244px;
+        max-width: 244px;
+        width: 21.75vw;
+        max-height: 340px;
+        min-height: 320px;
+    }
+
+    #main
+    {
+        max-height: 340px;
+        min-height: 320px;
+        min-width: 488px;
+        max-width: 488px;
+    }
+
+    #right #boxes .box #text {
+        color: #fff;
+        font-weight: 300;
+        font-size: 0.5rem;
+    }
     
+}
+
+@media screen and (min-width: 450px) and (min-height:450px)
+{
+    #left #content p {
+        font-size: 1.1rem;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    #right #boxes .box #text {
+        color: #fff;
+        font-weight: 300;
+        font-size: 0.8rem;
+    }
+    #right header h1 {
+        font-size: 2.8rem;
+    }
+}
+
+@media screen and (min-width: 580px) and (min-height:450px)
+{
+    #right #boxes .box #text {
+        color: #fff;
+        font-weight: 300;
+        font-size: 1.2rem;
+    }
+    #right header h1 {
+        font-size: 3.5rem;
+    }
+    #left #content
+    {
+        width: 100%;
+    }
+    #left #content p {
+        font-size: 1.5rem;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    #left #button-container
+    {
+        padding-top: 1rem;
+    }
+
+    #left #button-container button {
+    width: 180px;
+    height: 3.6rem;
+    font-size: 1rem;
+}
+}
+
+@media screen and (min-width: 800px) and (min-height:450px)
+{
+    #left #content p {
+        font-size: 1.7rem;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    #right #boxes .box #no
+    {
+        font-size: 2rem;
+    }
+
+    #right #boxes .box #text {
+        color: #fff;
+        font-weight: 300;
+        font-size: 1.6rem;
+    }
+    #right header h1 {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (min-width: 1100px) and (min-height:450px)
+{
+    #left,
+    #right {
+        min-width: 100px;
+        width: 50vw;
+        height: 79vh;
+        min-height: 640px;
+        max-height: 650px;
+    }
+
+    #main {
+        flex-direction: row;
+        max-width: 90.1vw;
+        height: 79vh;
+        margin: 0 auto;
+        min-height: 640px;
+        max-height: 650px;
+        max-width: 930px;
+    }
+
+    body {
+        padding: 12vh 12vw;
+    }
+
+    #left #button-container
+    {
+        height: 30%;
+    }
+
+    #left #button-container button {
+    width: 150px;
+    height: 2.8rem;
+    font-size: 0.9rem;
+    }
+
+    #left #content p {
+        font-size: 1rem;
+        margin: 0 auto;
+        width: 100%;
+    }
+    #right #boxes
+    {
+        padding-bottom: 5rem;
+    }
+
+    #right #boxes .box #no
+    {
+        font-size: 1.4rem;
+        padding-bottom: 1rem;
+    }
+
+    #right #boxes .box #text {
+        font-size: 1rem;
+    }
+    #right header h1 {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (min-width: 1250px)
+{
+    #left,
+    #right {
+        min-width: 100px;
+        width: 44.55vw;
+        height: 95vh;
+        min-height: 760px;
+        max-height: 800px;
+    }
+
+    #main {
+        flex-direction: row;
+        height: fit-content;
+        width: fit-content;
+        margin: 0 auto;
+        min-width: 1114px;
+        max-width: 1114px;
+        min-height: 760px;
+    }
+    body {
+        padding: 10vh 5vw;
+    }
+
+    #right #boxes .box #no
+    {
+        font-size: 1.6rem;
+        padding-bottom: 1rem;
+    }
+    #right header h1 {
+        font-size: 3.3rem;
+    }
+    #right #boxes .box #text {
+        font-size: 1.3rem;
+    }
+
+    #left #content p {
+        font-size: 1.2rem;
+    }
+
+    #left #button-container button {
+    width: 160px;
+    height: 2.9rem;
+    font-size: 0.9rem;
+    }
 }
